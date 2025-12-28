@@ -1,3 +1,5 @@
+
+
 kubectl edit deployment ingress-nginx-controller -n ingress-nginx
 
 add to spec.template.spec
@@ -22,6 +24,7 @@ kubectl patch deployment ingress-nginx-controller \
   }
 }'
 
+kubectl apply -f .infrastructure/ingress/ingress.yml
 
 wait for ingress pods to redeploy.
 
